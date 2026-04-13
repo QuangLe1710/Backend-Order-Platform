@@ -18,11 +18,17 @@ Project học backend hiện đại theo hướng:
 ## Chạy local
 ### Build
 ./mvnw clean test
-# hoặc trên Windows
+# Or in Windows
 mvnw.cmd clean test
 
 ### Run
 ./mvnw spring-boot:run
-# hoặc trên Windows
+# Or in Windows
 mvnw.cmd spring-boot:run
 ``
+
+# Docker build
+## step 1:
+- docker compose build
+## step 2:
+- docker compose up
