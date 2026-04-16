@@ -21,22 +21,26 @@ public class AuthServiceImpl implements AuthService {
     private final UserRepository userRepository;
 
     @Override
-    public void login(AuthenticationRequest authenticationRequest) {
+    public String login(AuthenticationRequest authenticationRequest) {
+        User user = userRepository.findByUserName(authenticationRequest.getUsername())
+                .orElseThrow(() -> new RuntimeException("Username not exist in system"));
 
-        if ( authenticationRequest.getUsername().equals(userRepository.findByUserName(authenticationRequest.getUsername()).getUserName())) {
+        if ( authenticationRequest.getUsername().equals(user.getUserName())) {
             if(
                     passwordEncoder.matches(
                             authenticationRequest.getPassword(),
-                            userRepository.findByUserName(authenticationRequest.getUsername()).getPasswordHash()
+                            user.getPasswordHash()
                     )
             ) {
                 log.info("Password is TRUE");
             } else {
-                log.error("Password is FALSE");
+                throw new RuntimeException("Password not TRUE");
             }
         } else {
-            log.error("Username not exist");
+            throw new RuntimeException("Username not exist");
         }
+
+        return "Login successfully";
     }
 
     @Override

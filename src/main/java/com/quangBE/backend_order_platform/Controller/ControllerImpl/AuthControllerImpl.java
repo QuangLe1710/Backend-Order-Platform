@@ -5,6 +5,7 @@ import com.quangBE.backend_order_platform.Dto.Request.AuthenticationRegisterDto;
 import com.quangBE.backend_order_platform.Dto.Request.AuthenticationRequest;
 import com.quangBE.backend_order_platform.Service.AuthService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,8 +22,8 @@ public class AuthControllerImpl implements AuthController {
     }
 
     @Override
-    public void login(AuthenticationRequest authenticationRequest) {
-        authService.login(authenticationRequest);
+    public ResponseEntity<String> login(AuthenticationRequest authenticationRequest) {
+        return ResponseEntity.ok(authService.login(authenticationRequest));
     }
 
     @Override

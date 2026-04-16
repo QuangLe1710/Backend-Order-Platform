@@ -2,6 +2,7 @@ package com.quangBE.backend_order_platform.Controller;
 
 import com.quangBE.backend_order_platform.Dto.Request.AuthenticationRegisterDto;
 import com.quangBE.backend_order_platform.Dto.Request.AuthenticationRequest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +17,7 @@ public interface AuthController {
     );
 
     @PostMapping("/login")
-    public void  login(
+    public ResponseEntity<String> login(
             @RequestBody AuthenticationRequest request
     );
 
