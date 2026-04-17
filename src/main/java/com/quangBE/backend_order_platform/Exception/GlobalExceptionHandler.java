@@ -11,7 +11,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = RuntimeException.class)
     ResponseEntity<String> handlingRuntimeException( RuntimeException exception) {
-        log.info("RUNTIME EXCEPTION đã đi vào đây");
+        log.info("RUNTIME EXCEPTION has just initialized");
         return ResponseEntity.badRequest().body(exception.getMessage());
     }
 
