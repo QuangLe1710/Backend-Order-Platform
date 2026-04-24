@@ -1,4 +1,4 @@
-package com.quangBE.backend_order_platform.Entity;
+package com.quangBE.backend_order_platform.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

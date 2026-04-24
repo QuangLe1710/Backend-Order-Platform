@@ -13,3 +13,5 @@ logging:
         org.springframework.jdbc: DEBUG
         org.hibernate.SQL: DEBUG
 
+jwt:
+    signerKey: "mPiFx7o9L5S5hohc3pADGBvtfhJTKYwsMWn/Lq0bcdE="

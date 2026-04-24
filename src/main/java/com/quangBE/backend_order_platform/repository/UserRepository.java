@@ -1,9 +1,7 @@
-package com.quangBE.backend_order_platform.Repository;
+package com.quangBE.backend_order_platform.repository;
 
-import com.quangBE.backend_order_platform.Entity.User;
+import com.quangBE.backend_order_platform.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;

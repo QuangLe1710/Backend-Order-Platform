@@ -1,4 +1,4 @@
-package com.quangBE.backend_order_platform.Dto.Request;
+package com.quangBE.backend_order_platform.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class AuthenticationRequest {
+public class IntrospectResponse {
 
-    private String username;
-
-    private String password;
+    private boolean valid;
 
 }

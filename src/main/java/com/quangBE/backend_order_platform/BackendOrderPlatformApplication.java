@@ -1,15 +1,12 @@
 package com.quangBE.backend_order_platform;
 
-import com.quangBE.backend_order_platform.Exception.GlobalExceptionHandler;
+import com.nimbusds.jose.proc.SecurityContext;
+import com.quangBE.backend_order_platform.exception.GlobalExceptionHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springdoc.core.utils.SpringSecurityUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.servlet.HandlerExceptionResolver;
-import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver;
 
 @Slf4j
 @SpringBootApplication
